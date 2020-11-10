@@ -14,7 +14,7 @@ function App() {
   const pokeId=() => {
     const min=Math.ceil(1)
     const max=Math.floor(151)
-    return Math.floor(Math.random()*(max-min+1)+min
+    return Math.floor(Math.random()*(max-min+1)+min)
   }
 
   const encounterWildPokemon=() => {
@@ -28,7 +28,14 @@ function App() {
 
   return (
     <div className="app-wrapper">
-      <h1>App</h1>
+      <header>
+        <h1 className="title">React Hooks</h1>
+        <h3 className="subtitle">With Pokémon</h3>
+      </header>
+      <section className="wild-pokemon">
+        {wildPokemon.name}
+      </section>
+
     </div>
   )
 }
