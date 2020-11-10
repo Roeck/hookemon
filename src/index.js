@@ -11,8 +11,19 @@ function App() {
     encounterWildPokemon()
   },[])
 
+  const pokeId=() => {
+    const min=Math.ceil(1)
+    const max=Math.floor(151)
+    return Math.floor(Math.random()*(max-min+1)+min
+  }
+
   const encounterWildPokemon=() => {
-    axios.get('https://pokeapi.co/api/v1/pokemon/151');
+    axios
+      .get('https://pokeapi.co/api/v2/pokemon/'+pokeId())
+      .then(response => {
+        console.log(response.data);
+        setWildPokemon(response.data);
+      })
   }
 
   return (
