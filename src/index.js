@@ -32,10 +32,28 @@ function App() {
         <h1 className="title">React Hooks</h1>
         <h3 className="subtitle">With Pokémon</h3>
       </header>
+
       <section className="wild-pokemon">
-        {wildPokemon.name}
+        <h2>Wild Encounter</h2>
+        <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon"
+          +wildPokemon.id+".png"} className="sprite" />
+        <h3>{wildPokemon.name}</h3>
+        <button className="catch-btn">CATCH!</button>
       </section>
 
+      <section className="pokedex">
+        <h2>Pokédex</h2>
+        <div className="pokedex-list">
+          {pokedex.map(pokemon => {
+            <div className="pokemon" key={pokemon.id}>
+              <img src={"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon"
+                +pokemon.id+".png"} className="sprite" />
+              <h3 className="pokemon-name">{pokemon.name}</h3>
+              <button className="remove">&times;</button>
+            </div>
+          })}
+        </div>
+      </section>
     </div>
   )
 }
