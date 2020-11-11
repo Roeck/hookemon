@@ -82,11 +82,12 @@ header {
   color: #ffffff;
   font-weight: 700;
   cursor: pointer;
+  border-radius: 4px 4px;
 }
-  .catch-btn:hover {
-    background-color: #41307c;
-  }
 
+  .catch-btn:hover {
+  background-color: #775ae0;
+}
 
 .wild-pokemon .catch-btn:active {
   background: #41307c;
@@ -99,6 +100,11 @@ header {
   flex-flow: column;
   overflow: scroll;
 }
+
+  .pokedex h2 {
+    text-align: center;
+  }
+
 
 .pokedex-list {
   width: 100%;
